@@ -1,0 +1,340 @@
+/* =========================
+COULEURS ET POLICES
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --rose: #b76e79;
+  --rose-pale: #f8e8eb;
+  --rose-clair: #fff7f6;
+  --creme: #fbf5ed;
+  --texte: #493b3e;
+  --gris: #857477;
+  --bordure: #ead5d8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffdf9;
+  color: var(--texte);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 em,
+h2 em {
+  color: var(--rose);
+  font-weight: 400;
+}
+
+/* =========================
+EN-TÊTE
+========================= */
+
+header {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 110px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  border-bottom: 1px solid var(--bordure);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: #704650;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+}
+
+.logo span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 12px;
+  color: var(--gris);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--rose);
+}
+
+/* =========================
+BANNIÈRE PRINCIPALE
+========================= */
+
+.hero {
+  width: 90%;
+  max-width: 1200px;
+  margin: 35px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: var(--rose-pale);
+}
+
+.hero-text {
+  padding: 65px 50px;
+  align-self: center;
+}
+
+.subtitle {
+  color: var(--rose);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 4vw, 58px);
+  margin-bottom: 22px;
+}
+
+.hero-text > p:not(.subtitle) {
+  color: var(--gris);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.hero-image {
+  min-height: 480px;
+  background-image: url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 22px;
+  background-color: var(--rose);
+  color: white;
+  font-size: 11px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #87505b;
+  transform: translateY(-2px);
+}
+
+/* =========================
+INTRODUCTION
+========================= */
+
+.introduction {
+  max-width: 750px;
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.introduction h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  margin-bottom: 25px;
+}
+
+.introduction > p:last-child {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+/* =========================
+SERVICES
+========================= */
+
+.services {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 100px;
+}
+
+.section-title {
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+}
+
+.service-container {
+  display: flex;
+  gap: 28px;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-card img {
+  height: 260px;
+  margin-bottom: 20px;
+}
+
+.number {
+  color: var(--rose);
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.service-card > p:last-child {
+  color: var(--gris);
+  font-size: 12px;
+}
+
+/* =========================
+CITATION
+========================= */
+
+.citation {
+  background-color: var(--rose-pale);
+  text-align: center;
+  padding: 60px 20px;
+  color: #704650;
+}
+
+.citation > p {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: var(--rose);
+}
+
+.citation blockquote {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(20px, 3vw, 30px);
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.citation span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--rose);
+}
+
+/* =========================
+PIED DE PAGE
+========================= */
+
+footer {
+  padding: 35px 5%;
+  border-top: 1px solid var(--bordure);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer p {
+  color: var(--gris);
+  font-size: 11px;
+}
+
+/* =========================
+VERSION MOBILE
+========================= */
+
+@media screen and (max-width: 750px) {
+  header {
+    flex-direction: column;
+    padding: 25px 0;
+    gap: 20px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    min-height: 300px;
+    grid-row: 1;
+  }
+
+  .hero-text {
+    padding: 35px 25px;
+  }
+
+  .introduction {
+    margin: 65px auto;
+  }
+
+  .service-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .service-card img {
+    height: 280px;
+  }
+
+  .services {
+    margin-bottom: 65px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

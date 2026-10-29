@@ -1,4 +1,3 @@
-
 def display_board(board):
     """Display the game board."""
     print()
